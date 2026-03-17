@@ -1,0 +1,145 @@
+/* Auth state rules */
+.page { display: none; }
+.page.active { display: block; }
+body.not-authenticated .role-logged-in { display: none; }
+body.authenticated .role-logged-out { display: none; }
+.role-admin { display: none; }
+body.is-admin .role-admin { display: block; }
+
+/* Base */
+body {
+  background: #fff;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  background: #1a1a2e !important;
+}
+.navbar-brand {
+  color: #fff !important;
+  font-weight: 600;
+}
+.nav-link {
+  color: #ccc !important;
+}
+.nav-link:hover {
+  color: #fff !important;
+}
+.dropdown-item.text-danger {
+  color: #dc3545 !important;
+}
+
+/* Main layout */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Inline form panel */
+.form-panel {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  background: #fff;
+}
+.form-panel h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Section header row */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Home info box */
+.alert-info-custom {
+  background: #e8f4fd;
+  border: 1px solid #bee5eb;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Tables */
+table th,
+table td {
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+/* Status badges */
+.badge-pending {
+  background: #ffc107;
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+.badge-approved {
+  background: #28a745;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+.badge-rejected {
+  background: #dc3545;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Request item rows */
+.item-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+  align-items: center;
+}
+.item-row input {
+  flex: 1;
+}
+.item-row .qty {
+  max-width: 70px;
+}
+
+/* Toast notifications */
+#toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.toast-msg {
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  min-width: 200px;
+}
+.toast-success {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+.toast-danger {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+.toast-info {
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
