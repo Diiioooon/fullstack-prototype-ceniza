@@ -2,17 +2,18 @@
   "name": "typescript-crud-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
-  "build": "tsc",
-  "start": "node dist/server.js",
-  "start:dev": "nodemon --exec ts-node src/server.ts",
-  "test": "ts-node tests/users.test.ts"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "start:dev": "nodemon --exec ts-node src/server.ts",
+    "test": "ts-node tests/users.test.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "nodemonConfig": {
+    "execMap": {
+      "ts": "ts-node -r tsconfig-paths/register"
+    }
+  },
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
@@ -31,6 +32,8 @@
     "@types/node": "^25.5.0",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.21.0",
     "typescript": "^6.0.2"
   }
 }
